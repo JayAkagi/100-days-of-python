@@ -6,7 +6,8 @@ selected_word = word_list[random.randint(0, len(word_list) - 1)]
 
 user_guess = input("Guess a letter: ").lower()
 
-if user_guess in selected_word:
-    print("Letter is in the word.")
-else:
-    print("Letter is not in the word.")
+for char in selected_word:
+    if char == user_guess:
+        print("Letter is in the word.")
+    else:
+        print(print("Letter is not in the word."))
