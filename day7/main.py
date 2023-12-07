@@ -10,4 +10,6 @@ for char in selected_word:
     if char == user_guess:
         print("Letter is in the word.")
     else:
-        print(print("Letter is not in the word."))
+        print("Letter not in the word.")
+
+print(selected_word)
