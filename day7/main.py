@@ -1,15 +1,18 @@
 import random
 
 word_list = ["daedalus", "butterfly", "bracer", "broadsword"]
+display = []
 
 selected_word = word_list[random.randint(0, len(word_list) - 1)]
 
 user_guess = input("Guess a letter: ").lower()
 
-for char in selected_word:
-    if char == user_guess:
-        print("Letter is in the word.")
-    else:
-        print("Letter not in the word.")
+for blank in range(len(selected_word)):
+    display.append("_")
 
-print(selected_word)
+for index in range(len(selected_word)):
+    char = selected_word[index]
+    if char == user_guess:
+        display[index] = char
+
+print(f" Complete the word: {''.join(display)}")
